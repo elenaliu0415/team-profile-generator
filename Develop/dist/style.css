@@ -1,0 +1,32 @@
+:root {
+  --bgdeep: #cd5c5c;
+  --bglighter: #db7093;
+  --bglightest: #faf0e6;
+}
+
+h3 h5 {
+  color: white;
+  font-weight: 400;
+}
+
+.jumbotron {
+  background-color: var(--bgdeep);
+  color: white;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.card-header {
+  background-color: var(--bglighter);
+  color: white;
+  font-weight: bolder;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+  background-color: var(--bglightest);
+  border-radius: 0 0 8px 8px;
+}

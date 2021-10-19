@@ -3,8 +3,9 @@ const Intern = require("./Intern");
 const Engineer = require("./Engineer");
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generateHTML = require("./generateHTML");
 
-let manager;
+let manager = {};
 let interns = [];
 let engineers = [];
 
@@ -27,7 +28,6 @@ function promptMenu() {
                 return promptIntern();
             case "Finish building team":
                 writeToFile("dist/team.html");
-                console.log("Your team is complete.");
                 break;
         }
     });
@@ -58,7 +58,7 @@ function promptManager() {
     ];
     inquirer.prompt(managerQuestions).then((answers) => {
         manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
-        // console.log(newManager);
+        console.log(manager);
         return promptMenu();
     });
 }
@@ -89,12 +89,12 @@ function promptEngineer() {
     inquirer.prompt(engineerQuestions).then((answers) => {
         let newEngineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
         engineers.push(newEngineer);
-        // console.log(newEngineer);
+        console.log(engineers);
         return promptMenu();
     });
 }
 
-function promptIntern() {
+function promptIntern() {   
     const internQuestions = [
         {
             type: "input",
@@ -120,23 +120,23 @@ function promptIntern() {
     inquirer.prompt(internQuestions).then((answers) => {
         let newIntern = new Intern(answers.name, answers.id, answers.email, answers.school)
         interns.push(newIntern);
-        // console.log(newIntern);
+        console.log(interns);
         return promptMenu();
     });
 }
 
 function writeToFile(fileName) {
+    // console.log(fileName);
     const contents = generateHTML(manager, interns, engineers);
-    s.writeFile(fileName, contents, (err) => {
+    // console.log(contents);
+    fs.writeFile(fileName, contents, (err) => {
         return err
           ? console.log(err)
-          : console.log(`Your professional ${fileName} is created!`);
+          : console.log(`Your team profile page ${fileName} is created!`);
       });
 }
 
-// Create a function to initialize app
 function init() {
     promptManager();
   }
-// Function call to initialize app
 init();

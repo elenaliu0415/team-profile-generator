@@ -10,6 +10,7 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <script src="https://use.fontawesome.com/0362c0af43.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>My Team</title>
   </head>
@@ -21,70 +22,22 @@
     </div>
 
     <div class="row justify-content-center">
-
+      <!-- team member cards -->
       <div class="col-3 m-3">
         <div class="card">
           <div class="card-header">
-            <h3>Name</h3>
-            <h5><i>icon</i> position</h5>
+            <h3>${manager.name}</h3>
+            <h5><i class="fa fa-coffee" aria-hidden="true"></i> ${manager.role}</h5>
           </div>
           <div class="card-body">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: 11</li>
-              <li class="list-group-item">Email: someone@gmail.com</li>
-              <li class="list-group-item">Office number: 619-123-4567</li>
+              <li class="list-group-item">ID: ${manager.id}</li>
+              <li class="list-group-item">Email: ${manager.email}</li>
+              <li class="list-group-item">Office number: ${manager.officeNumber}</li>
             </ul>
           </div>
         </div>
-      </div>
-
-      <div class="col-3 m-3">
-        <div class="card">
-          <div class="card-header">
-            <h3>Name</h3>
-            <h5><i>icon</i> position</h5>
-          </div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 m-3">
-        <div class="card">
-          <div class="card-header">
-            <h3>Name</h3>
-            <h5><i>icon</i> position</h5>
-          </div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 m-3">
-        <div class="card">
-          <div class="card-header">
-            <h3>Name</h3>
-            <h5><i>icon</i> position</h5>
-          </div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </div>  
     </div>
   </body>
 </html>
