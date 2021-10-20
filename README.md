@@ -5,7 +5,7 @@
 - [Table of Contents](#table-of-contents)
 - [Description](#description)
 - [Installation](#installation)
-- [Screenshot for Demonstration](#screenshot-for-demonstration)
+- [Screenshot for generated webpage](#screenshot-for-generated-webpage)
 - [Walkthrough Video](#walkthrough-video)
 - [Questions](#questions)
 
